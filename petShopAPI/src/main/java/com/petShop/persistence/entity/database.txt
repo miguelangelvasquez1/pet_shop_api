@@ -1,0 +1,71 @@
+CREATE DATABASE PetShopAPI_DB;
+USE PetShopAPI_DB;
+
+CREATE TABLE Dueño(
+id int auto_increment,
+firstName VARCHAR(40),
+lastName VARCHAR(40),
+email VARCHAR(40),
+celNumber int,
+address VARCHAR(40),
+PRIMARY KEY(id)
+);
+
+CREATE TABLE Employee(
+id int auto_increment,
+firstName VARCHAR(40),
+lastName VARCHAR(40),
+email VARCHAR(40),
+PRIMARY KEY(id)
+);
+
+CREATE TABLE Pet(
+id int auto_increment,
+name VARCHAR(40),
+species VARCHAR(20),
+age int,
+gender VARCHAR(10),
+PRIMARY KEY(id)
+);
+
+CREATE TABLE Cita(
+id int auto_increment,
+idPet int,
+fecha datetime,
+PRIMARY KEY(id),
+foreign key (idPet) references Pet(id) on delete cascade on update cascade
+);
+
+CREATE TABLE Producto(
+id int auto_increment,
+name VARCHAR(40),
+description VARCHAR(100),
+price decimal(10,2),
+PRIMARY KEY(id)
+);
+
+CREATE TABLE Proveedor(
+id int auto_increment,
+name VARCHAR(40),
+idProducto int,
+PRIMARY KEY(id),
+foreign key (idProducto) references Producto(id) on delete cascade on update cascade
+);
+
+CREATE TABLE Factura(
+id int auto_increment,
+name VARCHAR(40),
+
+);
+
+
+
+
+
+
+
+
+
+
+
+
