@@ -1,13 +1,31 @@
 package com.petShop.persistence.entity;
 
-public class Owner {
+import jakarta.persistence.*;
+import lombok.Data;
 
+import java.util.List;
+
+@Data
+@Entity
+@Table(name="propietarios")
+public class Owner {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id_propietario")
     private Integer id;
-    private String name;
+
+    @Column(name="nombres")
+    private String firtsName;
+
+    @Column(name="apellidos")
     private String lastName;
+
+    @Column(name="correo_electronico")
     private String email;
-    private String celNumber;
-    private String address;
+
+    @OneToMany(mappedBy = "owner")
+    private List<Pet> pets;
+
     /*
     Atributos
     id

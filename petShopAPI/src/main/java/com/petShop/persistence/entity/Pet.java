@@ -23,6 +23,11 @@ public class Pet {
     @Column(name = "genero")
     private String gender;
 
+    @ManyToOne
+    @JoinColumn(name = "id_propietario", insertable = false,updatable = false)//llave foranea
+    private Owner owner;
+
+
     public Integer getId() {
         return id;
     }
