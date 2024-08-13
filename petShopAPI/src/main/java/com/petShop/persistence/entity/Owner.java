@@ -7,8 +7,9 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name="propietarios")
+@Table(name="propietario")
 public class Owner {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_propietario")

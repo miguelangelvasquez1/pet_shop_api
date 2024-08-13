@@ -54,8 +54,11 @@ foreign key (idProducto) references Producto(id) on delete cascade on update cas
 
 CREATE TABLE Factura(
 id int auto_increment,
-name VARCHAR(40),
-
+fecha
+Owner
+Pet
+descripcion
+total
 );
 
 

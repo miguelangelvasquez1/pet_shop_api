@@ -17,4 +17,20 @@ public class OwnerRepository {
     public Optional<Owner> getOwnerById(int id) {
         return ownerCrudRepository.findById(id);
     }
+
+    public void saveOwner(Owner owner) {
+        ownerCrudRepository.save(owner);
+    }
+
+    public void deleteOwner(Owner owner) {
+        ownerCrudRepository.delete(owner);
+    }
+
+    public boolean existsOwner(int id) {
+        return ownerCrudRepository.existsById(id);
+    }
+
+    public int countAllOwners() {
+        return (int) ownerCrudRepository.count();
+    }
 }

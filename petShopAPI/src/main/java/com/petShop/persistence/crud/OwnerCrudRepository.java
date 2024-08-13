@@ -7,4 +7,5 @@ public interface OwnerCrudRepository extends CrudRepository<Owner, Integer> {
 
     @Query(value = "consulta SQL", nativeQuery = true)
 
+
 }
