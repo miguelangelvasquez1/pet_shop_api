@@ -11,7 +11,7 @@ address VARCHAR(40),
 PRIMARY KEY(id)
 );
 
-CREATE TABLE Employee(
+CREATE TABLE empleado(
 id int auto_increment,
 firstName VARCHAR(40),
 lastName VARCHAR(40),
@@ -19,7 +19,7 @@ email VARCHAR(40),
 PRIMARY KEY(id)
 );
 
-CREATE TABLE Pet(
+CREATE TABLE mascota(
 id int auto_increment,
 name VARCHAR(40),
 species VARCHAR(20),
