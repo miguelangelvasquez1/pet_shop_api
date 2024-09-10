@@ -3,6 +3,8 @@ package com.petShop.persistence.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @Entity
 @Table(name = "Proveedor")
@@ -16,7 +18,7 @@ public class Supplier {
     @Column(name = "nombre")
     private String name;
 
-    @OneToMany(mappedBy = "producto")
-    private Product product;
+    @OneToMany(mappedBy = "supplier")
+    private List<Product> products;
     //get all, save,delete,exists,countAll
 }

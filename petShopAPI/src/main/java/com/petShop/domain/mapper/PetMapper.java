@@ -14,3 +14,5 @@ public interface PetMapper {
     @Mapping(source = "ownerId", target = "owner.id") //DTO a base de datos
     Pet toPet(PetDTO petDTO);
 }
+// ownerId: atributo en PetDTO
+// owner.id: id de owner de la clase Pet de entity
